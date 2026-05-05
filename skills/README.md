@@ -1,6 +1,11 @@
 # Skill Index
 
-These are example skills based on the kind of work an operator, founder, sales leader, or mortgage executive might do.
+These are real skill packages based on the kind of work an operator, founder, sales leader, or mortgage executive might do.
+
+Each folder now includes:
+
+- `SKILL.md` for agent loading
+- `README.md` for public explanation, samples, and safety notes
 
 Use them as models. Replace the examples with your own job.
 
@@ -19,6 +24,10 @@ Use them as models. Replace the examples with your own job.
 11. `11-linkedin-build-in-public-post` - Turns the work into a public post.
 12. `12-scary-tool-review` - Forces an honest review of an intimidating tool.
 
+## How To Use These As Actual Skills
+
+Copy any folder into your AI tool's skills directory. The key file is `SKILL.md`; that is what tells the agent when to use the skill and how to run the workflow.
+
 ## How To Write Your Own
 
 Each skill should answer:
@@ -29,4 +38,3 @@ Each skill should answer:
 - What tools does it interact with?
 - What does good output look like?
 - What should it never do?
-
