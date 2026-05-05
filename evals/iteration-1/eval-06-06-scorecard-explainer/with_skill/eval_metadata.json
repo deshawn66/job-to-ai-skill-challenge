@@ -1,0 +1,10 @@
+{
+  "eval_id": 6,
+  "eval_name": "06-scorecard-explainer",
+  "prompt": "Explain this scorecard for a sales team: 12 people are above goal, 8 are close, 5 are behind, and we need to decide where coaching goes next.",
+  "assertions": [
+    "The skill tells the assistant not to invent causes behind numbers.",
+    "The skill translates metrics into action.",
+    "The output includes unknowns or data gaps."
+  ]
+}

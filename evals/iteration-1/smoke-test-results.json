@@ -1,0 +1,1081 @@
+{
+  "generated_at": "2026-05-05T16:23:07.355942+00:00",
+  "suite": "job-to-ai-skill-challenge-smoke-tests",
+  "skills_tested": 12,
+  "passed_skills": 12,
+  "failed_skills": 0,
+  "total_checks": 180,
+  "passed_checks": 180,
+  "failed_checks": 0,
+  "pass_rate": 1.0,
+  "results": [
+    {
+      "skill_dir": "skills/01-daily-work-capture",
+      "eval_id": 1,
+      "checks": [
+        {
+          "text": "SKILL.md exists",
+          "passed": true,
+          "evidence": "skills/01-daily-work-capture/SKILL.md"
+        },
+        {
+          "text": "Frontmatter includes name",
+          "passed": true,
+          "evidence": "job-to-ai-daily-work-capture"
+        },
+        {
+          "text": "Frontmatter includes description",
+          "passed": true,
+          "evidence": "Use when someone wants to turn rough notes from one real workday into a clean task log for AI skill discovery. Trigger o"
+        },
+        {
+          "text": "Name is kebab-case and under 64 characters",
+          "passed": true,
+          "evidence": "name='job-to-ai-daily-work-capture', length=28"
+        },
+        {
+          "text": "Description is specific and under 1024 characters",
+          "passed": true,
+          "evidence": "description length=285"
+        },
+        {
+          "text": "Includes  section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Inputs section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Workflow section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Output section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Safety section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Workflow starts with numbered steps",
+          "passed": true,
+          "evidence": "Found numbered workflow"
+        },
+        {
+          "text": "Safety section has at least three guardrails",
+          "passed": true,
+          "evidence": "guardrails=3"
+        },
+        {
+          "text": "No forbidden CMS wording in skill body",
+          "passed": true,
+          "evidence": "No hits"
+        },
+        {
+          "text": "Eval prompt is present and realistic",
+          "passed": true,
+          "evidence": "I had a messy operator day: reviewed a weekly report, answered five team questions, joined two meetings, researched an AI tool, wrote a handoff, and forgot to l"
+        },
+        {
+          "text": "Eval expectations exist",
+          "passed": true,
+          "evidence": "The skill has required YAML frontmatter with name and description. The skill defines Inputs, Workflow, Output, and Safety sections. The expected output asks for"
+        }
+      ],
+      "passed": true,
+      "prompt": "I had a messy operator day: reviewed a weekly report, answered five team questions, joined two meetings, researched an AI tool, wrote a handoff, and forgot to log two follow-ups. Turn this into a task log and tell me what could become skills.",
+      "expected_output": "A categorized task table with work type, automation potential, and best skill candidates.",
+      "expectations": [
+        "The skill has required YAML frontmatter with name and description.",
+        "The skill defines Inputs, Workflow, Output, and Safety sections.",
+        "The expected output asks for a structured task log and skill candidates."
+      ]
+    },
+    {
+      "skill_dir": "skills/02-repeat-task-finder",
+      "eval_id": 2,
+      "checks": [
+        {
+          "text": "SKILL.md exists",
+          "passed": true,
+          "evidence": "skills/02-repeat-task-finder/SKILL.md"
+        },
+        {
+          "text": "Frontmatter includes name",
+          "passed": true,
+          "evidence": "job-to-ai-repeat-task-finder"
+        },
+        {
+          "text": "Frontmatter includes description",
+          "passed": true,
+          "evidence": "Use when someone has a task log or messy list of job duties and wants to identify the best tasks to automate or turn int"
+        },
+        {
+          "text": "Name is kebab-case and under 64 characters",
+          "passed": true,
+          "evidence": "name='job-to-ai-repeat-task-finder', length=28"
+        },
+        {
+          "text": "Description is specific and under 1024 characters",
+          "passed": true,
+          "evidence": "description length=281"
+        },
+        {
+          "text": "Includes  section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Inputs section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Workflow section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Output section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Safety section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Workflow starts with numbered steps",
+          "passed": true,
+          "evidence": "Found numbered workflow"
+        },
+        {
+          "text": "Safety section has at least three guardrails",
+          "passed": true,
+          "evidence": "guardrails=3"
+        },
+        {
+          "text": "No forbidden CMS wording in skill body",
+          "passed": true,
+          "evidence": "No hits"
+        },
+        {
+          "text": "Eval prompt is present and realistic",
+          "passed": true,
+          "evidence": "Here is my task list from yesterday: meeting recap, report review, three email follow-ups, sales coaching prep, tool research, LinkedIn draft, team handoff, and"
+        },
+        {
+          "text": "Eval expectations exist",
+          "passed": true,
+          "evidence": "The skill prioritizes repeated, structured, high-friction work. The skill avoids automating final human judgment. The output contract includes input, output, an"
+        }
+      ],
+      "passed": true,
+      "prompt": "Here is my task list from yesterday: meeting recap, report review, three email follow-ups, sales coaching prep, tool research, LinkedIn draft, team handoff, and updating a spreadsheet. Pick the 12 best AI skills from this.",
+      "expected_output": "A ranked list of skill candidates with job pain, input, output, safety boundary, and top 3 to build first.",
+      "expectations": [
+        "The skill prioritizes repeated, structured, high-friction work.",
+        "The skill avoids automating final human judgment.",
+        "The output contract includes input, output, and safety boundary."
+      ]
+    },
+    {
+      "skill_dir": "skills/03-meeting-to-action-plan",
+      "eval_id": 3,
+      "checks": [
+        {
+          "text": "SKILL.md exists",
+          "passed": true,
+          "evidence": "skills/03-meeting-to-action-plan/SKILL.md"
+        },
+        {
+          "text": "Frontmatter includes name",
+          "passed": true,
+          "evidence": "job-to-ai-meeting-to-action-plan"
+        },
+        {
+          "text": "Frontmatter includes description",
+          "passed": true,
+          "evidence": "Use when someone wants to turn meeting notes, transcripts, or a rough recap into decisions, action items, owners, open q"
+        },
+        {
+          "text": "Name is kebab-case and under 64 characters",
+          "passed": true,
+          "evidence": "name='job-to-ai-meeting-to-action-plan', length=32"
+        },
+        {
+          "text": "Description is specific and under 1024 characters",
+          "passed": true,
+          "evidence": "description length=275"
+        },
+        {
+          "text": "Includes  section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Inputs section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Workflow section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Output section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Safety section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Workflow starts with numbered steps",
+          "passed": true,
+          "evidence": "Found numbered workflow"
+        },
+        {
+          "text": "Safety section has at least three guardrails",
+          "passed": true,
+          "evidence": "guardrails=4"
+        },
+        {
+          "text": "No forbidden CMS wording in skill body",
+          "passed": true,
+          "evidence": "No hits"
+        },
+        {
+          "text": "Eval prompt is present and realistic",
+          "passed": true,
+          "evidence": "Turn these meeting notes into a clear action plan: Maria owns the report review, James is checking partner follow-up, we agreed the training needs a pilot, and "
+        },
+        {
+          "text": "Eval expectations exist",
+          "passed": true,
+          "evidence": "The skill tells the assistant not to invent owners. The skill tells the assistant not to invent deadlines. The output separates decisions, action items, and ope"
+        }
+      ],
+      "passed": true,
+      "prompt": "Turn these meeting notes into a clear action plan: Maria owns the report review, James is checking partner follow-up, we agreed the training needs a pilot, and nobody picked a date for the dashboard fix.",
+      "expected_output": "Decisions, action items, owners, deadlines, open questions, risks, and optional follow-up message.",
+      "expectations": [
+        "The skill tells the assistant not to invent owners.",
+        "The skill tells the assistant not to invent deadlines.",
+        "The output separates decisions, action items, and open questions."
+      ]
+    },
+    {
+      "skill_dir": "skills/04-inbox-follow-up-drafter",
+      "eval_id": 4,
+      "checks": [
+        {
+          "text": "SKILL.md exists",
+          "passed": true,
+          "evidence": "skills/04-inbox-follow-up-drafter/SKILL.md"
+        },
+        {
+          "text": "Frontmatter includes name",
+          "passed": true,
+          "evidence": "job-to-ai-inbox-follow-up-drafter"
+        },
+        {
+          "text": "Frontmatter includes description",
+          "passed": true,
+          "evidence": "Use when someone needs a clear follow-up email, chat message, GoHighLevel message, or partner response drafted from thre"
+        },
+        {
+          "text": "Name is kebab-case and under 64 characters",
+          "passed": true,
+          "evidence": "name='job-to-ai-inbox-follow-up-drafter', length=33"
+        },
+        {
+          "text": "Description is specific and under 1024 characters",
+          "passed": true,
+          "evidence": "description length=259"
+        },
+        {
+          "text": "Includes  section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Inputs section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Workflow section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Output section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Safety section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Workflow starts with numbered steps",
+          "passed": true,
+          "evidence": "Found numbered workflow"
+        },
+        {
+          "text": "Safety section has at least three guardrails",
+          "passed": true,
+          "evidence": "guardrails=4"
+        },
+        {
+          "text": "No forbidden CMS wording in skill body",
+          "passed": true,
+          "evidence": "No hits"
+        },
+        {
+          "text": "Eval prompt is present and realistic",
+          "passed": true,
+          "evidence": "Draft a warm follow-up to a partner who asked for an update. I need to acknowledge the delay, say we are still working on it, and ask whether tomorrow morning i"
+        },
+        {
+          "text": "Eval expectations exist",
+          "passed": true,
+          "evidence": "The skill keeps follow-up output draft-only. The skill prevents unapproved promises. The output supports a softer version for sensitive topics."
+        }
+      ],
+      "passed": true,
+      "prompt": "Draft a warm follow-up to a partner who asked for an update. I need to acknowledge the delay, say we are still working on it, and ask whether tomorrow morning is soon enough.",
+      "expected_output": "A recommended draft, optional softer version, subject line if email, and one-line reason the draft works.",
+      "expectations": [
+        "The skill keeps follow-up output draft-only.",
+        "The skill prevents unapproved promises.",
+        "The output supports a softer version for sensitive topics."
+      ]
+    },
+    {
+      "skill_dir": "skills/05-tool-workflow-brief",
+      "eval_id": 5,
+      "checks": [
+        {
+          "text": "SKILL.md exists",
+          "passed": true,
+          "evidence": "skills/05-tool-workflow-brief/SKILL.md"
+        },
+        {
+          "text": "Frontmatter includes name",
+          "passed": true,
+          "evidence": "job-to-ai-tool-workflow-brief"
+        },
+        {
+          "text": "Frontmatter includes description",
+          "passed": true,
+          "evidence": "Use when a business leader wants a plain-English explanation of how tools, systems, or databases interact. Trigger on \"e"
+        },
+        {
+          "text": "Name is kebab-case and under 64 characters",
+          "passed": true,
+          "evidence": "name='job-to-ai-tool-workflow-brief', length=29"
+        },
+        {
+          "text": "Description is specific and under 1024 characters",
+          "passed": true,
+          "evidence": "description length=260"
+        },
+        {
+          "text": "Includes  section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Inputs section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Workflow section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Output section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Safety section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Workflow starts with numbered steps",
+          "passed": true,
+          "evidence": "Found numbered workflow"
+        },
+        {
+          "text": "Safety section has at least three guardrails",
+          "passed": true,
+          "evidence": "guardrails=4"
+        },
+        {
+          "text": "No forbidden CMS wording in skill body",
+          "passed": true,
+          "evidence": "No hits"
+        },
+        {
+          "text": "Eval prompt is present and realistic",
+          "passed": true,
+          "evidence": "Explain in plain English how Arive updates flow into our database and then into GoHighLevel for follow-up. I need the filing-cabinet version and the risk points"
+        },
+        {
+          "text": "Eval expectations exist",
+          "passed": true,
+          "evidence": "The skill uses Arive by name. The skill uses GoHighLevel or GHL by name. The skill avoids exposing passwords, secrets, or private configuration values."
+        }
+      ],
+      "passed": true,
+      "prompt": "Explain in plain English how Arive updates flow into our database and then into GoHighLevel for follow-up. I need the filing-cabinet version and the risk points.",
+      "expected_output": "Plain-English workflow summary, system flow, risk points, next checks, and technical-owner questions if needed.",
+      "expectations": [
+        "The skill uses Arive by name.",
+        "The skill uses GoHighLevel or GHL by name.",
+        "The skill avoids exposing passwords, secrets, or private configuration values."
+      ]
+    },
+    {
+      "skill_dir": "skills/06-scorecard-explainer",
+      "eval_id": 6,
+      "checks": [
+        {
+          "text": "SKILL.md exists",
+          "passed": true,
+          "evidence": "skills/06-scorecard-explainer/SKILL.md"
+        },
+        {
+          "text": "Frontmatter includes name",
+          "passed": true,
+          "evidence": "job-to-ai-scorecard-explainer"
+        },
+        {
+          "text": "Frontmatter includes description",
+          "passed": true,
+          "evidence": "Use when someone needs a report, dashboard, scorecard, spreadsheet, or metric snapshot translated into plain-English ins"
+        },
+        {
+          "text": "Name is kebab-case and under 64 characters",
+          "passed": true,
+          "evidence": "name='job-to-ai-scorecard-explainer', length=29"
+        },
+        {
+          "text": "Description is specific and under 1024 characters",
+          "passed": true,
+          "evidence": "description length=289"
+        },
+        {
+          "text": "Includes  section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Inputs section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Workflow section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Output section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Safety section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Workflow starts with numbered steps",
+          "passed": true,
+          "evidence": "Found numbered workflow"
+        },
+        {
+          "text": "Safety section has at least three guardrails",
+          "passed": true,
+          "evidence": "guardrails=4"
+        },
+        {
+          "text": "No forbidden CMS wording in skill body",
+          "passed": true,
+          "evidence": "No hits"
+        },
+        {
+          "text": "Eval prompt is present and realistic",
+          "passed": true,
+          "evidence": "Explain this scorecard for a sales team: 12 people are above goal, 8 are close, 5 are behind, and we need to decide where coaching goes next."
+        },
+        {
+          "text": "Eval expectations exist",
+          "passed": true,
+          "evidence": "The skill tells the assistant not to invent causes behind numbers. The skill translates metrics into action. The output includes unknowns or data gaps."
+        }
+      ],
+      "passed": true,
+      "prompt": "Explain this scorecard for a sales team: 12 people are above goal, 8 are close, 5 are behind, and we need to decide where coaching goes next.",
+      "expected_output": "Headline, three insights, what changed, what needs attention, recommended next action, and data gaps.",
+      "expectations": [
+        "The skill tells the assistant not to invent causes behind numbers.",
+        "The skill translates metrics into action.",
+        "The output includes unknowns or data gaps."
+      ]
+    },
+    {
+      "skill_dir": "skills/07-coaching-prep",
+      "eval_id": 7,
+      "checks": [
+        {
+          "text": "SKILL.md exists",
+          "passed": true,
+          "evidence": "skills/07-coaching-prep/SKILL.md"
+        },
+        {
+          "text": "Frontmatter includes name",
+          "passed": true,
+          "evidence": "job-to-ai-coaching-prep"
+        },
+        {
+          "text": "Frontmatter includes description",
+          "passed": true,
+          "evidence": "Use when a manager, founder, or sales leader needs to prepare for a coaching conversation, performance conversation, or "
+        },
+        {
+          "text": "Name is kebab-case and under 64 characters",
+          "passed": true,
+          "evidence": "name='job-to-ai-coaching-prep', length=23"
+        },
+        {
+          "text": "Description is specific and under 1024 characters",
+          "passed": true,
+          "evidence": "description length=294"
+        },
+        {
+          "text": "Includes  section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Inputs section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Workflow section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Output section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Safety section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Workflow starts with numbered steps",
+          "passed": true,
+          "evidence": "Found numbered workflow"
+        },
+        {
+          "text": "Safety section has at least three guardrails",
+          "passed": true,
+          "evidence": "guardrails=4"
+        },
+        {
+          "text": "No forbidden CMS wording in skill body",
+          "passed": true,
+          "evidence": "No hits"
+        },
+        {
+          "text": "Eval prompt is present and realistic",
+          "passed": true,
+          "evidence": "Prepare me for a coaching conversation with a sales professional who is below goal but improved activity over the last two weeks. I want to encourage the effort"
+        },
+        {
+          "text": "Eval expectations exist",
+          "passed": true,
+          "evidence": "The skill keeps the tone direct and respectful. The skill includes affirm and challenge sections. The safety section prevents personal diagnosis."
+        }
+      ],
+      "passed": true,
+      "prompt": "Prepare me for a coaching conversation with a sales professional who is below goal but improved activity over the last two weeks. I want to encourage the effort and set a clear next standard.",
+      "expected_output": "Conversation goal, affirmations, challenge, questions, next commitment, and optional opening script.",
+      "expectations": [
+        "The skill keeps the tone direct and respectful.",
+        "The skill includes affirm and challenge sections.",
+        "The safety section prevents personal diagnosis."
+      ]
+    },
+    {
+      "skill_dir": "skills/08-playbook-builder",
+      "eval_id": 8,
+      "checks": [
+        {
+          "text": "SKILL.md exists",
+          "passed": true,
+          "evidence": "skills/08-playbook-builder/SKILL.md"
+        },
+        {
+          "text": "Frontmatter includes name",
+          "passed": true,
+          "evidence": "job-to-ai-playbook-builder"
+        },
+        {
+          "text": "Frontmatter includes description",
+          "passed": true,
+          "evidence": "Use when someone wants to turn a repeatable business process, sales motion, training topic, or operating habit into a pr"
+        },
+        {
+          "text": "Name is kebab-case and under 64 characters",
+          "passed": true,
+          "evidence": "name='job-to-ai-playbook-builder', length=26"
+        },
+        {
+          "text": "Description is specific and under 1024 characters",
+          "passed": true,
+          "evidence": "description length=270"
+        },
+        {
+          "text": "Includes  section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Inputs section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Workflow section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Output section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Safety section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Workflow starts with numbered steps",
+          "passed": true,
+          "evidence": "Found numbered workflow"
+        },
+        {
+          "text": "Safety section has at least three guardrails",
+          "passed": true,
+          "evidence": "guardrails=4"
+        },
+        {
+          "text": "No forbidden CMS wording in skill body",
+          "passed": true,
+          "evidence": "No hits"
+        },
+        {
+          "text": "Eval prompt is present and realistic",
+          "passed": true,
+          "evidence": "Build a practical playbook for following up with past customers after a market update. Audience is sales professionals. Keep it motivating and simple."
+        },
+        {
+          "text": "Eval expectations exist",
+          "passed": true,
+          "evidence": "The skill turns a process into steps. The skill includes examples and common mistakes. The safety section flags unsupported or regulated claims."
+        }
+      ],
+      "passed": true,
+      "prompt": "Build a practical playbook for following up with past customers after a market update. Audience is sales professionals. Keep it motivating and simple.",
+      "expected_output": "Title, goal, audience, when to use it, steps, examples, common mistakes, and checklist.",
+      "expectations": [
+        "The skill turns a process into steps.",
+        "The skill includes examples and common mistakes.",
+        "The safety section flags unsupported or regulated claims."
+      ]
+    },
+    {
+      "skill_dir": "skills/09-compliance-first-pass",
+      "eval_id": 9,
+      "checks": [
+        {
+          "text": "SKILL.md exists",
+          "passed": true,
+          "evidence": "skills/09-compliance-first-pass/SKILL.md"
+        },
+        {
+          "text": "Frontmatter includes name",
+          "passed": true,
+          "evidence": "job-to-ai-compliance-first-pass"
+        },
+        {
+          "text": "Frontmatter includes description",
+          "passed": true,
+          "evidence": "Use when public-facing copy, recruiting material, sales content, ads, emails, landing pages, or social posts need a firs"
+        },
+        {
+          "text": "Name is kebab-case and under 64 characters",
+          "passed": true,
+          "evidence": "name='job-to-ai-compliance-first-pass', length=31"
+        },
+        {
+          "text": "Description is specific and under 1024 characters",
+          "passed": true,
+          "evidence": "description length=311"
+        },
+        {
+          "text": "Includes  section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Inputs section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Workflow section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Output section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Safety section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Workflow starts with numbered steps",
+          "passed": true,
+          "evidence": "Found numbered workflow"
+        },
+        {
+          "text": "Safety section has at least three guardrails",
+          "passed": true,
+          "evidence": "guardrails=4"
+        },
+        {
+          "text": "No forbidden CMS wording in skill body",
+          "passed": true,
+          "evidence": "No hits"
+        },
+        {
+          "text": "Eval prompt is present and realistic",
+          "passed": true,
+          "evidence": "Review this public copy before we post it: We guarantee faster approvals than anyone else and will get every customer the best possible rate."
+        },
+        {
+          "text": "Eval expectations exist",
+          "passed": true,
+          "evidence": "The skill says it is not legal advice. The skill flags guarantees and broad comparison claims. The skill suggests safer wording instead of approving content."
+        }
+      ],
+      "passed": true,
+      "prompt": "Review this public copy before we post it: We guarantee faster approvals than anyone else and will get every customer the best possible rate.",
+      "expected_output": "Risk flags, why each item is risky, safer wording options, review-needed items, and publish-readiness note.",
+      "expectations": [
+        "The skill says it is not legal advice.",
+        "The skill flags guarantees and broad comparison claims.",
+        "The skill suggests safer wording instead of approving content."
+      ]
+    },
+    {
+      "skill_dir": "skills/10-founder-research-and-feedback",
+      "eval_id": 10,
+      "checks": [
+        {
+          "text": "SKILL.md exists",
+          "passed": true,
+          "evidence": "skills/10-founder-research-and-feedback/SKILL.md"
+        },
+        {
+          "text": "Frontmatter includes name",
+          "passed": true,
+          "evidence": "job-to-ai-founder-research-and-feedback"
+        },
+        {
+          "text": "Frontmatter includes description",
+          "passed": true,
+          "evidence": "Use when someone is testing an AI startup, researching \"AI for my job\" tools, comparing products, forming a public opini"
+        },
+        {
+          "text": "Name is kebab-case and under 64 characters",
+          "passed": true,
+          "evidence": "name='job-to-ai-founder-research-and-feedback', length=39"
+        },
+        {
+          "text": "Description is specific and under 1024 characters",
+          "passed": true,
+          "evidence": "description length=298"
+        },
+        {
+          "text": "Includes  section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Inputs section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Workflow section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Output section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Safety section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Workflow starts with numbered steps",
+          "passed": true,
+          "evidence": "Found numbered workflow"
+        },
+        {
+          "text": "Safety section has at least three guardrails",
+          "passed": true,
+          "evidence": "guardrails=4"
+        },
+        {
+          "text": "No forbidden CMS wording in skill body",
+          "passed": true,
+          "evidence": "No hits"
+        },
+        {
+          "text": "Eval prompt is present and realistic",
+          "passed": true,
+          "evidence": "I tried an AI sales follow-up startup. It wrote fast drafts but had no approval step and did not understand regulated sales language. Turn this into a scorecard"
+        },
+        {
+          "text": "Eval expectations exist",
+          "passed": true,
+          "evidence": "The skill separates useful, hype, missing, and worth-paying-for. The skill drafts specific respectful founder feedback. The safety section prevents claiming unt"
+        }
+      ],
+      "passed": true,
+      "prompt": "I tried an AI sales follow-up startup. It wrote fast drafts but had no approval step and did not understand regulated sales language. Turn this into a scorecard and founder message.",
+      "expected_output": "Product summary, useful parts, hype or weak spots, missing workflow pieces, would-pay-if condition, and founder message.",
+      "expectations": [
+        "The skill separates useful, hype, missing, and worth-paying-for.",
+        "The skill drafts specific respectful founder feedback.",
+        "The safety section prevents claiming untested features."
+      ]
+    },
+    {
+      "skill_dir": "skills/11-linkedin-build-in-public-post",
+      "eval_id": 11,
+      "checks": [
+        {
+          "text": "SKILL.md exists",
+          "passed": true,
+          "evidence": "skills/11-linkedin-build-in-public-post/SKILL.md"
+        },
+        {
+          "text": "Frontmatter includes name",
+          "passed": true,
+          "evidence": "job-to-ai-linkedin-build-in-public-post"
+        },
+        {
+          "text": "Frontmatter includes description",
+          "passed": true,
+          "evidence": "Use when someone wants to turn real work, a shipped artifact, a GitHub repo, a portfolio page, a tool review, or an AI e"
+        },
+        {
+          "text": "Name is kebab-case and under 64 characters",
+          "passed": true,
+          "evidence": "name='job-to-ai-linkedin-build-in-public-post', length=39"
+        },
+        {
+          "text": "Description is specific and under 1024 characters",
+          "passed": true,
+          "evidence": "description length=297"
+        },
+        {
+          "text": "Includes  section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Inputs section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Workflow section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Output section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Safety section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Workflow starts with numbered steps",
+          "passed": true,
+          "evidence": "Found numbered workflow"
+        },
+        {
+          "text": "Safety section has at least three guardrails",
+          "passed": true,
+          "evidence": "guardrails=4"
+        },
+        {
+          "text": "No forbidden CMS wording in skill body",
+          "passed": true,
+          "evidence": "No hits"
+        },
+        {
+          "text": "Eval prompt is present and realistic",
+          "passed": true,
+          "evidence": "Write the LinkedIn post for launching this project: I tracked one workday, turned it into 12 AI skills, published the GitHub repo, and built the landing page."
+        },
+        {
+          "text": "Eval expectations exist",
+          "passed": true,
+          "evidence": "The skill requires a specific closing question. The style section avoids emojis, em dashes, filler, and unexplained jargon. The safety section prevents exaggera"
+        }
+      ],
+      "passed": true,
+      "prompt": "Write the LinkedIn post for launching this project: I tracked one workday, turned it into 12 AI skills, published the GitHub repo, and built the landing page.",
+      "expected_output": "A ready-to-post LinkedIn draft with hook, problem, action, lesson, and question.",
+      "expectations": [
+        "The skill requires a specific closing question.",
+        "The style section avoids emojis, em dashes, filler, and unexplained jargon.",
+        "The safety section prevents exaggeration."
+      ]
+    },
+    {
+      "skill_dir": "skills/12-scary-tool-review",
+      "eval_id": 12,
+      "checks": [
+        {
+          "text": "SKILL.md exists",
+          "passed": true,
+          "evidence": "skills/12-scary-tool-review/SKILL.md"
+        },
+        {
+          "text": "Frontmatter includes name",
+          "passed": true,
+          "evidence": "job-to-ai-scary-tool-review"
+        },
+        {
+          "text": "Frontmatter includes description",
+          "passed": true,
+          "evidence": "Use when someone tries an intimidating, technical, experimental, local, or frontier AI tool and wants an honest field re"
+        },
+        {
+          "text": "Name is kebab-case and under 64 characters",
+          "passed": true,
+          "evidence": "name='job-to-ai-scary-tool-review', length=27"
+        },
+        {
+          "text": "Description is specific and under 1024 characters",
+          "passed": true,
+          "evidence": "description length=301"
+        },
+        {
+          "text": "Includes  section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Inputs section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Workflow section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Output section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Includes Safety section",
+          "passed": true,
+          "evidence": "Found"
+        },
+        {
+          "text": "Workflow starts with numbered steps",
+          "passed": true,
+          "evidence": "Found numbered workflow"
+        },
+        {
+          "text": "Safety section has at least three guardrails",
+          "passed": true,
+          "evidence": "guardrails=4"
+        },
+        {
+          "text": "No forbidden CMS wording in skill body",
+          "passed": true,
+          "evidence": "No hits"
+        },
+        {
+          "text": "Eval prompt is present and realistic",
+          "passed": true,
+          "evidence": "I tried OpenClaw for two hours. Setup was confusing, but I can see how local agents could control files and workflows. Turn this into an honest field report for"
+        },
+        {
+          "text": "Eval expectations exist",
+          "passed": true,
+          "evidence": "The skill separates setup friction from product value. The skill does not pretend early tools are production-ready. The safety section warns against connecting "
+        }
+      ],
+      "passed": true,
+      "prompt": "I tried OpenClaw for two hours. Setup was confusing, but I can see how local agents could control files and workflows. Turn this into an honest field report for non-technical operators.",
+      "expected_output": "Field report with confusion, surprises, what worked, what failed, what feels powerful, what is too early, and recommendation.",
+      "expectations": [
+        "The skill separates setup friction from product value.",
+        "The skill does not pretend early tools are production-ready.",
+        "The safety section warns against connecting sensitive systems casually."
+      ]
+    }
+  ]
+}

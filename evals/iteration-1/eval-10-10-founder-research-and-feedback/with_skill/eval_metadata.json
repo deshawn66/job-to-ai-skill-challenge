@@ -1,0 +1,10 @@
+{
+  "eval_id": 10,
+  "eval_name": "10-founder-research-and-feedback",
+  "prompt": "I tried an AI sales follow-up startup. It wrote fast drafts but had no approval step and did not understand regulated sales language. Turn this into a scorecard and founder message.",
+  "assertions": [
+    "The skill separates useful, hype, missing, and worth-paying-for.",
+    "The skill drafts specific respectful founder feedback.",
+    "The safety section prevents claiming untested features."
+  ]
+}

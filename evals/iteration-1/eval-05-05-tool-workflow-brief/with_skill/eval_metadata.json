@@ -1,0 +1,10 @@
+{
+  "eval_id": 5,
+  "eval_name": "05-tool-workflow-brief",
+  "prompt": "Explain in plain English how Arive updates flow into our database and then into GoHighLevel for follow-up. I need the filing-cabinet version and the risk points.",
+  "assertions": [
+    "The skill uses Arive by name.",
+    "The skill uses GoHighLevel or GHL by name.",
+    "The skill avoids exposing passwords, secrets, or private configuration values."
+  ]
+}

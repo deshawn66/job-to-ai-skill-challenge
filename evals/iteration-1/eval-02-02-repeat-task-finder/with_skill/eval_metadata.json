@@ -1,0 +1,10 @@
+{
+  "eval_id": 2,
+  "eval_name": "02-repeat-task-finder",
+  "prompt": "Here is my task list from yesterday: meeting recap, report review, three email follow-ups, sales coaching prep, tool research, LinkedIn draft, team handoff, and updating a spreadsheet. Pick the 12 best AI skills from this.",
+  "assertions": [
+    "The skill prioritizes repeated, structured, high-friction work.",
+    "The skill avoids automating final human judgment.",
+    "The output contract includes input, output, and safety boundary."
+  ]
+}

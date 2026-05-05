@@ -1,0 +1,100 @@
+{
+  "expectations": [
+    {
+      "text": "SKILL.md exists",
+      "passed": true,
+      "evidence": "skills/06-scorecard-explainer/SKILL.md"
+    },
+    {
+      "text": "Frontmatter includes name",
+      "passed": true,
+      "evidence": "job-to-ai-scorecard-explainer"
+    },
+    {
+      "text": "Frontmatter includes description",
+      "passed": true,
+      "evidence": "Use when someone needs a report, dashboard, scorecard, spreadsheet, or metric snapshot translated into plain-English ins"
+    },
+    {
+      "text": "Name is kebab-case and under 64 characters",
+      "passed": true,
+      "evidence": "name='job-to-ai-scorecard-explainer', length=29"
+    },
+    {
+      "text": "Description is specific and under 1024 characters",
+      "passed": true,
+      "evidence": "description length=289"
+    },
+    {
+      "text": "Includes  section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Includes Inputs section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Includes Workflow section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Includes Output section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Includes Safety section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Workflow starts with numbered steps",
+      "passed": true,
+      "evidence": "Found numbered workflow"
+    },
+    {
+      "text": "Safety section has at least three guardrails",
+      "passed": true,
+      "evidence": "guardrails=4"
+    },
+    {
+      "text": "No forbidden CMS wording in skill body",
+      "passed": true,
+      "evidence": "No hits"
+    },
+    {
+      "text": "Eval prompt is present and realistic",
+      "passed": true,
+      "evidence": "Explain this scorecard for a sales team: 12 people are above goal, 8 are close, 5 are behind, and we need to decide where coaching goes next."
+    },
+    {
+      "text": "Eval expectations exist",
+      "passed": true,
+      "evidence": "The skill tells the assistant not to invent causes behind numbers. The skill translates metrics into action. The output includes unknowns or data gaps."
+    }
+  ],
+  "summary": {
+    "passed": 15,
+    "failed": 0,
+    "total": 15,
+    "pass_rate": 1.0
+  },
+  "claims": [
+    {
+      "claim": "The skill package is structurally valid for v1 smoke testing.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "All smoke-test checks passed."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "No no-skill baseline was run in this lightweight smoke-test pass."
+    ],
+    "needs_review": [],
+    "workarounds": []
+  }
+}

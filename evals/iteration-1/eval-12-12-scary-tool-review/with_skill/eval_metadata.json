@@ -1,0 +1,10 @@
+{
+  "eval_id": 12,
+  "eval_name": "12-scary-tool-review",
+  "prompt": "I tried OpenClaw for two hours. Setup was confusing, but I can see how local agents could control files and workflows. Turn this into an honest field report for non-technical operators.",
+  "assertions": [
+    "The skill separates setup friction from product value.",
+    "The skill does not pretend early tools are production-ready.",
+    "The safety section warns against connecting sensitive systems casually."
+  ]
+}

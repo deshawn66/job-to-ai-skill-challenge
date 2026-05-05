@@ -1,0 +1,139 @@
+{
+  "suite_name": "job-to-ai-skill-challenge-smoke-tests",
+  "description": "One realistic test prompt per skill package. These are smoke tests: they verify each skill has a usable trigger, workflow, output contract, and safety boundary.",
+  "evals": [
+    {
+      "id": 1,
+      "skill_dir": "skills/01-daily-work-capture",
+      "prompt": "I had a messy operator day: reviewed a weekly report, answered five team questions, joined two meetings, researched an AI tool, wrote a handoff, and forgot to log two follow-ups. Turn this into a task log and tell me what could become skills.",
+      "expected_output": "A categorized task table with work type, automation potential, and best skill candidates.",
+      "expectations": [
+        "The skill has required YAML frontmatter with name and description.",
+        "The skill defines Inputs, Workflow, Output, and Safety sections.",
+        "The expected output asks for a structured task log and skill candidates."
+      ]
+    },
+    {
+      "id": 2,
+      "skill_dir": "skills/02-repeat-task-finder",
+      "prompt": "Here is my task list from yesterday: meeting recap, report review, three email follow-ups, sales coaching prep, tool research, LinkedIn draft, team handoff, and updating a spreadsheet. Pick the 12 best AI skills from this.",
+      "expected_output": "A ranked list of skill candidates with job pain, input, output, safety boundary, and top 3 to build first.",
+      "expectations": [
+        "The skill prioritizes repeated, structured, high-friction work.",
+        "The skill avoids automating final human judgment.",
+        "The output contract includes input, output, and safety boundary."
+      ]
+    },
+    {
+      "id": 3,
+      "skill_dir": "skills/03-meeting-to-action-plan",
+      "prompt": "Turn these meeting notes into a clear action plan: Maria owns the report review, James is checking partner follow-up, we agreed the training needs a pilot, and nobody picked a date for the dashboard fix.",
+      "expected_output": "Decisions, action items, owners, deadlines, open questions, risks, and optional follow-up message.",
+      "expectations": [
+        "The skill tells the assistant not to invent owners.",
+        "The skill tells the assistant not to invent deadlines.",
+        "The output separates decisions, action items, and open questions."
+      ]
+    },
+    {
+      "id": 4,
+      "skill_dir": "skills/04-inbox-follow-up-drafter",
+      "prompt": "Draft a warm follow-up to a partner who asked for an update. I need to acknowledge the delay, say we are still working on it, and ask whether tomorrow morning is soon enough.",
+      "expected_output": "A recommended draft, optional softer version, subject line if email, and one-line reason the draft works.",
+      "expectations": [
+        "The skill keeps follow-up output draft-only.",
+        "The skill prevents unapproved promises.",
+        "The output supports a softer version for sensitive topics."
+      ]
+    },
+    {
+      "id": 5,
+      "skill_dir": "skills/05-tool-workflow-brief",
+      "prompt": "Explain in plain English how Arive updates flow into our database and then into GoHighLevel for follow-up. I need the filing-cabinet version and the risk points.",
+      "expected_output": "Plain-English workflow summary, system flow, risk points, next checks, and technical-owner questions if needed.",
+      "expectations": [
+        "The skill uses Arive by name.",
+        "The skill uses GoHighLevel or GHL by name.",
+        "The skill avoids exposing passwords, secrets, or private configuration values."
+      ]
+    },
+    {
+      "id": 6,
+      "skill_dir": "skills/06-scorecard-explainer",
+      "prompt": "Explain this scorecard for a sales team: 12 people are above goal, 8 are close, 5 are behind, and we need to decide where coaching goes next.",
+      "expected_output": "Headline, three insights, what changed, what needs attention, recommended next action, and data gaps.",
+      "expectations": [
+        "The skill tells the assistant not to invent causes behind numbers.",
+        "The skill translates metrics into action.",
+        "The output includes unknowns or data gaps."
+      ]
+    },
+    {
+      "id": 7,
+      "skill_dir": "skills/07-coaching-prep",
+      "prompt": "Prepare me for a coaching conversation with a sales professional who is below goal but improved activity over the last two weeks. I want to encourage the effort and set a clear next standard.",
+      "expected_output": "Conversation goal, affirmations, challenge, questions, next commitment, and optional opening script.",
+      "expectations": [
+        "The skill keeps the tone direct and respectful.",
+        "The skill includes affirm and challenge sections.",
+        "The safety section prevents personal diagnosis."
+      ]
+    },
+    {
+      "id": 8,
+      "skill_dir": "skills/08-playbook-builder",
+      "prompt": "Build a practical playbook for following up with past customers after a market update. Audience is sales professionals. Keep it motivating and simple.",
+      "expected_output": "Title, goal, audience, when to use it, steps, examples, common mistakes, and checklist.",
+      "expectations": [
+        "The skill turns a process into steps.",
+        "The skill includes examples and common mistakes.",
+        "The safety section flags unsupported or regulated claims."
+      ]
+    },
+    {
+      "id": 9,
+      "skill_dir": "skills/09-compliance-first-pass",
+      "prompt": "Review this public copy before we post it: We guarantee faster approvals than anyone else and will get every customer the best possible rate.",
+      "expected_output": "Risk flags, why each item is risky, safer wording options, review-needed items, and publish-readiness note.",
+      "expectations": [
+        "The skill says it is not legal advice.",
+        "The skill flags guarantees and broad comparison claims.",
+        "The skill suggests safer wording instead of approving content."
+      ]
+    },
+    {
+      "id": 10,
+      "skill_dir": "skills/10-founder-research-and-feedback",
+      "prompt": "I tried an AI sales follow-up startup. It wrote fast drafts but had no approval step and did not understand regulated sales language. Turn this into a scorecard and founder message.",
+      "expected_output": "Product summary, useful parts, hype or weak spots, missing workflow pieces, would-pay-if condition, and founder message.",
+      "expectations": [
+        "The skill separates useful, hype, missing, and worth-paying-for.",
+        "The skill drafts specific respectful founder feedback.",
+        "The safety section prevents claiming untested features."
+      ]
+    },
+    {
+      "id": 11,
+      "skill_dir": "skills/11-linkedin-build-in-public-post",
+      "prompt": "Write the LinkedIn post for launching this project: I tracked one workday, turned it into 12 AI skills, published the GitHub repo, and built the landing page.",
+      "expected_output": "A ready-to-post LinkedIn draft with hook, problem, action, lesson, and question.",
+      "expectations": [
+        "The skill requires a specific closing question.",
+        "The style section avoids emojis, em dashes, filler, and unexplained jargon.",
+        "The safety section prevents exaggeration."
+      ]
+    },
+    {
+      "id": 12,
+      "skill_dir": "skills/12-scary-tool-review",
+      "prompt": "I tried OpenClaw for two hours. Setup was confusing, but I can see how local agents could control files and workflows. Turn this into an honest field report for non-technical operators.",
+      "expected_output": "Field report with confusion, surprises, what worked, what failed, what feels powerful, what is too early, and recommendation.",
+      "expectations": [
+        "The skill separates setup friction from product value.",
+        "The skill does not pretend early tools are production-ready.",
+        "The safety section warns against connecting sensitive systems casually."
+      ]
+    }
+  ]
+}
+

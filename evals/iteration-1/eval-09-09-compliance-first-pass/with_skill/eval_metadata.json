@@ -1,0 +1,10 @@
+{
+  "eval_id": 9,
+  "eval_name": "09-compliance-first-pass",
+  "prompt": "Review this public copy before we post it: We guarantee faster approvals than anyone else and will get every customer the best possible rate.",
+  "assertions": [
+    "The skill says it is not legal advice.",
+    "The skill flags guarantees and broad comparison claims.",
+    "The skill suggests safer wording instead of approving content."
+  ]
+}

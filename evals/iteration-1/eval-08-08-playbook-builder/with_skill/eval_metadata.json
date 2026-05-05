@@ -1,0 +1,10 @@
+{
+  "eval_id": 8,
+  "eval_name": "08-playbook-builder",
+  "prompt": "Build a practical playbook for following up with past customers after a market update. Audience is sales professionals. Keep it motivating and simple.",
+  "assertions": [
+    "The skill turns a process into steps.",
+    "The skill includes examples and common mistakes.",
+    "The safety section flags unsupported or regulated claims."
+  ]
+}

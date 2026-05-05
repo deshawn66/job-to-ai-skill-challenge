@@ -1,0 +1,10 @@
+{
+  "eval_id": 7,
+  "eval_name": "07-coaching-prep",
+  "prompt": "Prepare me for a coaching conversation with a sales professional who is below goal but improved activity over the last two weeks. I want to encourage the effort and set a clear next standard.",
+  "assertions": [
+    "The skill keeps the tone direct and respectful.",
+    "The skill includes affirm and challenge sections.",
+    "The safety section prevents personal diagnosis."
+  ]
+}

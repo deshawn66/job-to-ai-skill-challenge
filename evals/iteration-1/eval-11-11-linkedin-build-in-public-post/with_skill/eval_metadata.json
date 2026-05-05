@@ -1,0 +1,10 @@
+{
+  "eval_id": 11,
+  "eval_name": "11-linkedin-build-in-public-post",
+  "prompt": "Write the LinkedIn post for launching this project: I tracked one workday, turned it into 12 AI skills, published the GitHub repo, and built the landing page.",
+  "assertions": [
+    "The skill requires a specific closing question.",
+    "The style section avoids emojis, em dashes, filler, and unexplained jargon.",
+    "The safety section prevents exaggeration."
+  ]
+}

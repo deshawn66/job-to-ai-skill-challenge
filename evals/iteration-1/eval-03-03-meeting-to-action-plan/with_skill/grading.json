@@ -1,0 +1,100 @@
+{
+  "expectations": [
+    {
+      "text": "SKILL.md exists",
+      "passed": true,
+      "evidence": "skills/03-meeting-to-action-plan/SKILL.md"
+    },
+    {
+      "text": "Frontmatter includes name",
+      "passed": true,
+      "evidence": "job-to-ai-meeting-to-action-plan"
+    },
+    {
+      "text": "Frontmatter includes description",
+      "passed": true,
+      "evidence": "Use when someone wants to turn meeting notes, transcripts, or a rough recap into decisions, action items, owners, open q"
+    },
+    {
+      "text": "Name is kebab-case and under 64 characters",
+      "passed": true,
+      "evidence": "name='job-to-ai-meeting-to-action-plan', length=32"
+    },
+    {
+      "text": "Description is specific and under 1024 characters",
+      "passed": true,
+      "evidence": "description length=275"
+    },
+    {
+      "text": "Includes  section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Includes Inputs section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Includes Workflow section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Includes Output section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Includes Safety section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Workflow starts with numbered steps",
+      "passed": true,
+      "evidence": "Found numbered workflow"
+    },
+    {
+      "text": "Safety section has at least three guardrails",
+      "passed": true,
+      "evidence": "guardrails=4"
+    },
+    {
+      "text": "No forbidden CMS wording in skill body",
+      "passed": true,
+      "evidence": "No hits"
+    },
+    {
+      "text": "Eval prompt is present and realistic",
+      "passed": true,
+      "evidence": "Turn these meeting notes into a clear action plan: Maria owns the report review, James is checking partner follow-up, we agreed the training needs a pilot, and "
+    },
+    {
+      "text": "Eval expectations exist",
+      "passed": true,
+      "evidence": "The skill tells the assistant not to invent owners. The skill tells the assistant not to invent deadlines. The output separates decisions, action items, and ope"
+    }
+  ],
+  "summary": {
+    "passed": 15,
+    "failed": 0,
+    "total": 15,
+    "pass_rate": 1.0
+  },
+  "claims": [
+    {
+      "claim": "The skill package is structurally valid for v1 smoke testing.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "All smoke-test checks passed."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "No no-skill baseline was run in this lightweight smoke-test pass."
+    ],
+    "needs_review": [],
+    "workarounds": []
+  }
+}

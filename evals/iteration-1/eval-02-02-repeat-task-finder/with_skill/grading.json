@@ -1,0 +1,100 @@
+{
+  "expectations": [
+    {
+      "text": "SKILL.md exists",
+      "passed": true,
+      "evidence": "skills/02-repeat-task-finder/SKILL.md"
+    },
+    {
+      "text": "Frontmatter includes name",
+      "passed": true,
+      "evidence": "job-to-ai-repeat-task-finder"
+    },
+    {
+      "text": "Frontmatter includes description",
+      "passed": true,
+      "evidence": "Use when someone has a task log or messy list of job duties and wants to identify the best tasks to automate or turn int"
+    },
+    {
+      "text": "Name is kebab-case and under 64 characters",
+      "passed": true,
+      "evidence": "name='job-to-ai-repeat-task-finder', length=28"
+    },
+    {
+      "text": "Description is specific and under 1024 characters",
+      "passed": true,
+      "evidence": "description length=281"
+    },
+    {
+      "text": "Includes  section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Includes Inputs section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Includes Workflow section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Includes Output section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Includes Safety section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Workflow starts with numbered steps",
+      "passed": true,
+      "evidence": "Found numbered workflow"
+    },
+    {
+      "text": "Safety section has at least three guardrails",
+      "passed": true,
+      "evidence": "guardrails=3"
+    },
+    {
+      "text": "No forbidden CMS wording in skill body",
+      "passed": true,
+      "evidence": "No hits"
+    },
+    {
+      "text": "Eval prompt is present and realistic",
+      "passed": true,
+      "evidence": "Here is my task list from yesterday: meeting recap, report review, three email follow-ups, sales coaching prep, tool research, LinkedIn draft, team handoff, and"
+    },
+    {
+      "text": "Eval expectations exist",
+      "passed": true,
+      "evidence": "The skill prioritizes repeated, structured, high-friction work. The skill avoids automating final human judgment. The output contract includes input, output, an"
+    }
+  ],
+  "summary": {
+    "passed": 15,
+    "failed": 0,
+    "total": 15,
+    "pass_rate": 1.0
+  },
+  "claims": [
+    {
+      "claim": "The skill package is structurally valid for v1 smoke testing.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "All smoke-test checks passed."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "No no-skill baseline was run in this lightweight smoke-test pass."
+    ],
+    "needs_review": [],
+    "workarounds": []
+  }
+}

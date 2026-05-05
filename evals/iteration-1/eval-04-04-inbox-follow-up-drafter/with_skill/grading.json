@@ -1,0 +1,100 @@
+{
+  "expectations": [
+    {
+      "text": "SKILL.md exists",
+      "passed": true,
+      "evidence": "skills/04-inbox-follow-up-drafter/SKILL.md"
+    },
+    {
+      "text": "Frontmatter includes name",
+      "passed": true,
+      "evidence": "job-to-ai-inbox-follow-up-drafter"
+    },
+    {
+      "text": "Frontmatter includes description",
+      "passed": true,
+      "evidence": "Use when someone needs a clear follow-up email, chat message, GoHighLevel message, or partner response drafted from thre"
+    },
+    {
+      "text": "Name is kebab-case and under 64 characters",
+      "passed": true,
+      "evidence": "name='job-to-ai-inbox-follow-up-drafter', length=33"
+    },
+    {
+      "text": "Description is specific and under 1024 characters",
+      "passed": true,
+      "evidence": "description length=259"
+    },
+    {
+      "text": "Includes  section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Includes Inputs section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Includes Workflow section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Includes Output section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Includes Safety section",
+      "passed": true,
+      "evidence": "Found"
+    },
+    {
+      "text": "Workflow starts with numbered steps",
+      "passed": true,
+      "evidence": "Found numbered workflow"
+    },
+    {
+      "text": "Safety section has at least three guardrails",
+      "passed": true,
+      "evidence": "guardrails=4"
+    },
+    {
+      "text": "No forbidden CMS wording in skill body",
+      "passed": true,
+      "evidence": "No hits"
+    },
+    {
+      "text": "Eval prompt is present and realistic",
+      "passed": true,
+      "evidence": "Draft a warm follow-up to a partner who asked for an update. I need to acknowledge the delay, say we are still working on it, and ask whether tomorrow morning i"
+    },
+    {
+      "text": "Eval expectations exist",
+      "passed": true,
+      "evidence": "The skill keeps follow-up output draft-only. The skill prevents unapproved promises. The output supports a softer version for sensitive topics."
+    }
+  ],
+  "summary": {
+    "passed": 15,
+    "failed": 0,
+    "total": 15,
+    "pass_rate": 1.0
+  },
+  "claims": [
+    {
+      "claim": "The skill package is structurally valid for v1 smoke testing.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "All smoke-test checks passed."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "No no-skill baseline was run in this lightweight smoke-test pass."
+    ],
+    "needs_review": [],
+    "workarounds": []
+  }
+}
